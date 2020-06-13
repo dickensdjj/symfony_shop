@@ -1,3 +1,46 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+# API
+
+new_product:
+  path: /api/v1/product
+  controller: App\Controller\Api\ProductCrudController::create
+  methods: POST
+
+update_product:
+  path: /api/v1/product/{id<\d+>}
+  controller: App\Controller\Api\ProductCrudController::update
+  methods: PUT
+
+get_product_by_id:
+  path: /api/v1/product/{id}
+  controller: App\Controller\Api\ProductCrudController::get_product
+  methods: GET
+
+get_products:
+  path: /api/v1/product
+  controller: App\Controller\Api\ProductCrudController::create
+  methods: GET
+
+delete_product:
+  path: /api/v1/product/
+  controller: App\Controller\Api\ProductCrudController::delete
+  methods: DELETE
+
+# Page
+homepage:
+  path: /
+  controller: App\Controller\HomepageController::index
+  methods: GET
+
+product_list_page:
+  path: /products
+  controller: App\Controller\ProductDetailPageController::index
+  methods: GET
+
+product_detail_page:
+  path: /product/{id<\d+>}
+  controller: App\Controller\ProductListPageController::index
+  methods: GET
