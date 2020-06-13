@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% block top_menu %}{% endblock %}
+    {% block page_contents %}
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    {% block sidebar %}{% endblock %}
+                </div>
+                <div class="col-9">
+                    {% block main_contents %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}
