@@ -3,6 +3,10 @@
 #    controller: App\Controller\DefaultController::index
 
 # API
+hello:
+  path: /hello
+  controller: App\Controller\Api\ProductCrudController::hello
+  methods: GET
 
 new_product:
   path: /api/v1/product

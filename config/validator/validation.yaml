@@ -1,0 +1,12 @@
+App\Entity\Product:
+  properties:
+    name:
+      - NotBlank: ~
+    created_at:
+      - Blank: ~
+    description:
+      - NotBlank: ~
+    price:
+      - Type: integer
+    sku:
+      - NotBlank: ~
