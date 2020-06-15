@@ -110,7 +110,7 @@ class Product
         return $this->created_at;
     }
 
-    public function setCreatedAt(?string $createdAt): self
+    public function setCreatedAt(?\DateTime $createdAt): self
     {
         $this->created_at = $createdAt;
 

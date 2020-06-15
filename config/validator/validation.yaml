@@ -3,10 +3,11 @@ App\Entity\Product:
     name:
       - NotBlank: ~
     created_at:
-      - Blank: ~
+      - NotBlank: ~
     description:
       - NotBlank: ~
     price:
       - Type: integer
+      - NotBlank: ~
     sku:
       - NotBlank: ~

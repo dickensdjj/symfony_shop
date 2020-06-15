@@ -19,8 +19,13 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
+    /**
+     * Retrieve last inserted row of data
+     * @return int|mixed|string|null
+     */
     public function findLastInserted()
     {
+        // TODO: this is not working correctly at the moment. Please update it in the future
         return $this
             ->createQueryBuilder("e")
             ->orderBy("id", "DESC")
